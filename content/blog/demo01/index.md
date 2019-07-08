@@ -1,7 +1,7 @@
 ---
-slug: demo-01
-date: 2017-01-01
-title: 'A Lovely Walk In The Park'
+slug: remote-work
+date: 2019-07-29
+title: 'Thoughts about remote work'
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie leo ut sodales porta. Vivamus pharetra risus ac fermentum faucibus. Nam in sodales ex.'
 published: true
 banner: './banner.png'
