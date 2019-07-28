@@ -137,7 +137,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         ? `blog/${node.frontmatter.date
             .split('T')[0]
             .replace(/-/g, '/')}/${titleSlugged}`
-        : node.frontmatter.slug || titleSlugged
+        : `blog/${node.frontmatter.slug}` || titleSlugged
 
     createNodeField({
       name: 'id',
