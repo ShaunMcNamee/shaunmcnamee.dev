@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import SEO from 'components/SEO'
 import { css } from '@emotion/core'
 import Container from 'components/Container'
@@ -10,6 +10,7 @@ import { fonts } from '../lib/typography'
 import Share from '../components/Share'
 import config from '../../config/website'
 import { bpMaxSM } from '../lib/breakpoints'
+import Markdown from 'react-markdown'
 
 export default function Post({
   data: { site, mdx },
@@ -19,6 +20,7 @@ export default function Post({
   const date = mdx.frontmatter.date
   const title = mdx.frontmatter.title
   const banner = mdx.frontmatter.banner
+  const bannerCredit = mdx.frontmatter.bannerCredit
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter} noSubscribeForm>
@@ -61,6 +63,7 @@ export default function Post({
           {banner && (
             <div
               css={css`
+                text-align: center;
                 padding: 30px;
                 ${bpMaxSM} {
                   padding: 0;
@@ -71,10 +74,11 @@ export default function Post({
                 sizes={banner.childImageSharp.fluid}
                 alt={site.siteMetadata.keywords.join(', ')}
               />
+              {bannerCredit ? <Markdown>{bannerCredit}</Markdown> : null}
             </div>
           )}
           <br />
-          <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
         {/* <SubscribeForm /> */}
       </article>
@@ -107,12 +111,11 @@ export const pageQuery = graphql`
             }
           }
         }
+        bannerCredit
         slug
         keywords
       }
-      code {
-        body
-      }
+      body
     }
   }
 `

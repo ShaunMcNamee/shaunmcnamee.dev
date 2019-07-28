@@ -35,7 +35,7 @@ const Hero = () => (
           max-width: ${rhythm(15)};
         `}
       >
-        Your blog says the things you want to say.
+        This is my page, its a work in progress
       </h1>
     </Container>
     <div
@@ -83,7 +83,7 @@ export default function Index({ data: { site, allMdx } }) {
               })}
             >
               <Link
-                to={post.frontmatter.slug}
+                to={`blog/${post.frontmatter.slug}`}
                 aria-label={`View ${post.frontmatter.title}`}
               >
                 {post.frontmatter.title}

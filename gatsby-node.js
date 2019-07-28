@@ -55,9 +55,6 @@ exports.createPages = ({ actions, graphql }) =>
               slug
               date
             }
-            code {
-              scope
-            }
           }
         }
       }
@@ -179,6 +176,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: 'banner',
       node,
       value: node.frontmatter.banner,
+    })
+
+    createNodeField({
+      name: 'bannerCredit',
+      node,
+      value: node.frontmatter.bannerCredit,
     })
 
     createNodeField({
