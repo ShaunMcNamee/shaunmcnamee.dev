@@ -2,7 +2,6 @@
 slug: remote-work
 date: 2019-08-06
 title: 'Thoughts on remote work'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie leo ut sodales porta. Vivamus pharetra risus ac fermentum faucibus. Nam in sodales ex.'
 published: true
 banner: './banner.jpg'
 bannerCredit:

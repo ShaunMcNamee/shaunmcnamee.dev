@@ -92,7 +92,7 @@ export default function Index({ data: { site, allMdx } }) {
             <Description>
               {post.excerpt}{' '}
               <Link
-                to={post.frontmatter.slug}
+                to={`blog/${post.frontmatter.slug}`}
                 aria-label={`View ${post.frontmatter.title}`}
               >
                 Read Article →
