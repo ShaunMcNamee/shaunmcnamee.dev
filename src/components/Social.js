@@ -14,7 +14,7 @@ export const Twitter = ({
       color: ${color};
       margin-left: 10px;
       :hover {
-        color: ${theme.brand.primary};
+        color: ${theme.brand.blue};
       }
     `}
     aria-label="Visit my Twitter"
@@ -44,7 +44,7 @@ export const LinkedIn = ({
       margin-left: 10px;
       color: ${color};
       :hover {
-        color: ${theme.brand.primary};
+        color: ${theme.brand.blue};
       }
     `}
     aria-label="Visit my LinkedIn"
@@ -73,7 +73,7 @@ export const GitHub = ({
       margin-left: 10px;
       color: ${color};
       :hover {
-        color: ${theme.brand.primary};
+        color: ${theme.brand.blue};
       }
     `}
     aria-label="Visit my GitHub"

@@ -38,7 +38,7 @@ const reset = css`
     background-color: ${theme.colors.bg_color};
   }
   ::selection {
-    color: ${theme.colors.white};
+    color: ${theme.brand.white};
     background-color: ${theme.colors.link_color};
   }
 

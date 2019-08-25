@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { css } from '@emotion/core'
-import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import Container from 'components/Container'
@@ -12,10 +11,10 @@ const Hero = () => (
   <section
     css={css`
       * {
-        color: ${theme.colors.white};
+        color: ${theme.brand.white};
       }
       width: 100%;
-      background: ${theme.brand.primary};
+      background: ${theme.brand.blue};
       padding: 20px 0 30px 0;
       display: flex;
     `}
@@ -35,7 +34,7 @@ const Hero = () => (
           max-width: ${rhythm(15)};
         `}
       >
-        This is my page, its a work in progress
+        This is my page, it is a work in progress
       </h1>
     </Container>
     <div
@@ -47,17 +46,12 @@ const Hero = () => (
   </section>
 )
 
-const Description = styled.p`
-  margin-bottom: 10px;
-  display: inline-block;
-`
-
 export default function Index({ data: { site, allMdx } }) {
   return (
     <Layout
       site={site}
-      headerColor={theme.colors.white}
-      headerBg={theme.brand.primary}
+      headerColor={theme.brand.white}
+      headerBg={theme.brand.blue}
       noSubscribeForm
     >
       <Hero />
@@ -66,47 +60,31 @@ export default function Index({ data: { site, allMdx } }) {
           padding-bottom: 0;
         `}
       >
-        {allMdx.edges.map(({ node: post }) => (
-          <div
-            key={post.id}
-            css={css`
-              margin-bottom: 40px;
-            `}
+        <p>
+          Hello, I am Shaun McNamee. I am a Web Developer living in Kansas with
+          my wife and two children. I enjoy programming (duh!), video games,
+          board games, poker, baseball, and playing with my children.
+        </p>
+        <p>
+          If you want to read thoughts I have about programming and the tech
+          industry, check out my{' '}
+          <Link
+            to="/blog"
+            aria-label="Visit blog page"
+            style={{ textDecoration: 'underline' }}
           >
-            <h2
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: theme.transition.ease,
-                ':hover': {
-                  color: theme.brand.primary,
-                },
-              })}
-            >
-              <Link
-                to={`blog/${post.frontmatter.slug}`}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                {post.frontmatter.title}
-              </Link>
-            </h2>
-            <Description>
-              {post.excerpt}{' '}
-              <Link
-                to={`blog/${post.frontmatter.slug}`}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description>
-          </div>
-        ))}
-        <Link
-          to="/blog"
-          aria-label="Visit blog page"
-          className="button-secondary"
-        >
-          View all articles
-        </Link>
+            blog
+          </Link>
+          . If you are interested, you can see my{' '}
+          <Link
+            to="/work-history"
+            aria-label="Visit work history"
+            style={{ textDecoration: 'underline' }}
+          >
+            work history
+          </Link>
+          .
+        </p>
         <hr />
       </Container>
     </Layout>

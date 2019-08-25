@@ -17,7 +17,8 @@ export const globalStyles = css`
   .button-secondary {
     border-radius: 4px;
     padding: 12px 12px;
-    background: ${theme.colors.primary_light};
+    background: ${theme.brand.blue};
+    color: ${theme.brand.navy};
   }
   ${bpMaxSM} {
     p,
@@ -63,12 +64,12 @@ export const globalStyles = css`
   }
   button {
     border-radius: 4px;
-    background-color: ${theme.brand.primary};
+    background-color: ${theme.brand.blue};
     border: none;
-    color: ${theme.colors.white};
+    color: ${theme.brand.white};
     padding: 5px 10px;
     cursor: pointer;
-    border: 1px solid ${theme.brand.primary};
+    border: 1px solid ${theme.brand.blue};
     transition: ${theme.transition.ease};
     :hover {
       background: ${theme.colors.link_color_hover};

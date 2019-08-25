@@ -70,13 +70,8 @@ module.exports = {
         display: 'standalone',
         icons: [
           {
-            src: '/favicons/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/favicons/android-chrome-512x512.png',
-            sizes: '512x512',
+            src: '/favicons/android-chrome-96x96.png',
+            sizes: '96x96',
             type: 'image/png',
           },
         ],
@@ -110,8 +105,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.fields.date,
-                  url: site.siteMetadata.siteUrl +"/"+ edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl +"/"+ edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
                 })
               })
             },

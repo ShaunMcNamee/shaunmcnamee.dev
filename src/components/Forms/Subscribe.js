@@ -47,7 +47,7 @@ class SignUp extends React.Component {
             Accept: 'application/json',
             'Content-Type': 'application/json',
           },
-        }
+        },
       )
 
       const responseJson = await response.json()

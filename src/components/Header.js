@@ -32,7 +32,7 @@ const Header = ({
             color: ${headerColor ? headerColor : theme.colors.body_color};
           }
           a:hover {
-            color: ${headerColor === theme.colors.white
+            color: ${headerColor === theme.brand.white
               ? 'white'
               : theme.colors.link_color_hover};
           }
@@ -41,25 +41,7 @@ const Header = ({
         <Link to="/" aria-label="go to homepage" activeClassName="active">
           {siteTitle}
         </Link>
-        <div
-          css={css`
-            font-size: 16px;
-            line-height: 1.25;
-            display: flex;
-            align-items: center;
-            a {
-              color: ${dark ? '#fbfbfb' : 'rgba(0,0,0,0.85)'};
-              text-decoration: none;
-              & + a {
-                margin-left: 32px;
-              }
-            }
-            .active {
-              display: none;
-              visibility: hidden;
-            }
-          `}
-        >
+        <div>
           <Link to="/blog" activeClassName="active" aria-label="View blog page">
             Blog
           </Link>
