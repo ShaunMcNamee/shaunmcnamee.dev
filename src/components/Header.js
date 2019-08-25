@@ -16,7 +16,7 @@ const Header = ({
       width: 100%;
       flex-shrink: 0;
       background: none;
-      padding: 30px 0 0 0;
+      padding: 30px 0;
       background: ${dark ? '#090909' : `${bgColor}` || 'none'};
     `}
   >
@@ -33,17 +33,33 @@ const Header = ({
           }
           a:hover {
             color: ${headerColor === theme.brand.white
-              ? 'white'
+              ? theme.brand.black
               : theme.colors.link_color_hover};
           }
         `}
       >
-        <Link to="/" aria-label="go to homepage" activeClassName="active">
+        <Link
+          to="/"
+          aria-label="go to homepage"
+          activeStyle={{ color: theme.brand.grey }}
+        >
           {siteTitle}
         </Link>
         <div>
-          <Link to="/blog" activeClassName="active" aria-label="View blog page">
+          <Link
+            to="/blog"
+            aria-label="View blog page"
+            activeStyle={{ color: theme.brand.grey }}
+          >
             Blog
+          </Link>
+          &nbsp; &nbsp;
+          <Link
+            to="/work-history"
+            activeClassName="active"
+            aria-label="Visit work history"
+          >
+            Resume
           </Link>
         </div>
       </nav>

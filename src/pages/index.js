@@ -15,7 +15,7 @@ const Hero = () => (
       }
       width: 100%;
       background: ${theme.brand.blue};
-      padding: 20px 0 30px 0;
+      padding: 0 0 30px 0;
       display: flex;
     `}
   >

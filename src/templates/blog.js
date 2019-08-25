@@ -7,6 +7,7 @@ import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import { bpMaxSM } from '../lib/breakpoints'
+import theme from '../../config/theme'
 
 const Blog = ({
   data: { site, allMdx },
@@ -25,7 +26,12 @@ const Blog = ({
     .filter(post => post !== undefined)
 
   return (
-    <Layout site={site} noSubscribeForm>
+    <Layout
+      site={site}
+      headerColor={theme.brand.white}
+      headerBg={theme.brand.blue}
+      noSubscribeForm
+    >
       <SEO />
       <Container noVerticalPadding>
         {posts.map(({ node: post }) => (
