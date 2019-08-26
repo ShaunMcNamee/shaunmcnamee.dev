@@ -56,8 +56,8 @@ const Header = ({
           &nbsp; &nbsp;
           <Link
             to="/work-history"
-            activeClassName="active"
             aria-label="Visit work history"
+            activeStyle={{ color: theme.brand.grey }}
           >
             Resume
           </Link>

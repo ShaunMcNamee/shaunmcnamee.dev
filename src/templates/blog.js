@@ -138,7 +138,13 @@ export const pageQuery = graphql`
     site {
       ...site
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: { published: { ne: false } }
+        fileAbsolutePath: { regex: "//content/blog//" }
+      }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 300)

@@ -173,6 +173,22 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
 
     createNodeField({
+      name: 'startDate',
+      node,
+      value: node.frontmatter.startDate
+        ? node.frontmatter.startDate.split(' ')[0]
+        : '',
+    })
+
+    createNodeField({
+      name: 'endDate',
+      node,
+      value: node.frontmatter.endDate
+        ? node.frontmatter.endDate.split(' ')[0]
+        : '',
+    })
+
+    createNodeField({
       name: 'banner',
       node,
       value: node.frontmatter.banner,
