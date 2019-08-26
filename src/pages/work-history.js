@@ -55,7 +55,6 @@ export const pageQuery = graphql`
             endDate(formatString: "MMMM YYYY")
             company
             title
-            text
           }
           body
         }
