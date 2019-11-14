@@ -84,7 +84,7 @@ export default function Post({
       </article>
       <Container noVerticalPadding>
         <Share
-          url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
+          url={`${config.siteUrl}blog/${mdx.frontmatter.slug}/`}
           title={title}
           twitterHandle={config.twitterHandle}
         />
