@@ -68,19 +68,11 @@ export default function Index({ data: { site } }) {
         <p>
           If you want to read thoughts I have about programming and the tech
           industry, check out my{' '}
-          <Link
-            to="/blog"
-            aria-label="Visit blog page"
-            style={{ textDecoration: 'underline' }}
-          >
+          <Link to="/blog" aria-label="Visit blog page">
             blog
           </Link>
           . If you are interested, you can see my{' '}
-          <Link
-            to="/work-history"
-            aria-label="Visit work history"
-            style={{ textDecoration: 'underline' }}
-          >
+          <Link to="/work-history" aria-label="Visit work history">
             work history
           </Link>
           .

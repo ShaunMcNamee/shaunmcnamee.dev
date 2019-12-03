@@ -13,7 +13,7 @@ const colors = {
   black: brand.black,
   bg_color: brand.white,
   body_color: brand.black,
-  link_color: brand.navy,
+  link_color: brand.blue,
   link_color_hover: brand.blue,
   red: '#E86C60',
   green: '#29B573',
