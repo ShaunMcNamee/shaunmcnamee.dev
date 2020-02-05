@@ -6,6 +6,7 @@ const brand = {
   black: '#000000',
   white: '#F6F7F7',
   grey: '#616367',
+  silver: '#A9A9A9',
 }
 
 const colors = {
@@ -19,10 +20,28 @@ const colors = {
   green: '#29B573',
 }
 
+const light = {
+  headerBackground: brand.blue,
+  headerText: brand.white,
+  headerButtonText: brand.white,
+  headerButtonHover: brand.navy,
+  headerButtonActive: brand.grey,
+}
+
+const dark = {
+  headerBackground: brand.black,
+  headerText: brand.white,
+  headerButtonText: brand.white,
+  headerButtonHover: brand.blue,
+  headerButtonActive: brand.silver,
+}
+
 const theme = {
   colors,
   fonts,
   brand,
+  light,
+  dark,
   breakpoints: {
     xs: '400px',
     s: '600px',

@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 import { bpMaxSM } from '../lib/breakpoints'
 import SubscribeForm from './Forms/Subscribe'
 import { Twitter, GitHub } from './Social'
-import Container from './Container'
+import { Container } from './Container'
 
 const Footer = ({ author, noSubscribeForm }) => (
   <footer>

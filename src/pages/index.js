@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { css } from '@emotion/core'
-import Layout from '../components/Layout'
+import {Layout} from '../components/Layout'
 import Link from '../components/Link'
-import Container from 'components/Container'
+import { Container } from 'components/Container'
 import { rhythm } from '../lib/typography'
 import theme from '../../config/theme'
 
@@ -50,8 +50,6 @@ export default function Index({ data: { site } }) {
   return (
     <Layout
       site={site}
-      headerColor={theme.brand.white}
-      headerBg={theme.brand.blue}
       noSubscribeForm
     >
       <Hero />
