@@ -217,5 +217,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: node.frontmatter.redirects,
     })
+
+    createNodeField({
+      name: 'name',
+      node,
+      value: node.frontmatter.name,
+    })
+
+    createNodeField({
+      name: 'link',
+      node,
+      value: node.frontmatter.link,
+    })
   }
 }

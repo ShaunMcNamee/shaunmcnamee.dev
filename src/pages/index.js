@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { css } from '@emotion/core'
-import {Layout} from '../components/Layout'
+import { Layout } from '../components/Layout'
 import Link from '../components/Link'
 import { Container } from 'components/Container'
 import { rhythm } from '../lib/typography'
 import theme from '../../config/theme'
+import config from '../../config/website'
 
 const Hero = () => (
   <section
@@ -34,7 +35,7 @@ const Hero = () => (
           max-width: ${rhythm(15)};
         `}
       >
-        This is my page, it is a work in progress
+        The life and times of a modern web developer
       </h1>
     </Container>
     <div
@@ -48,10 +49,7 @@ const Hero = () => (
 
 export default function Index({ data: { site } }) {
   return (
-    <Layout
-      site={site}
-      noSubscribeForm
-    >
+    <Layout site={site} noSubscribeForm>
       <Hero />
       <Container
         css={css`
@@ -60,21 +58,45 @@ export default function Index({ data: { site } }) {
       >
         <p>
           Hello, I am Shaun McNamee. I am a Web Developer living in Kansas with
-          my wife and two children. I enjoy programming (duh!), video games,
-          board games, poker, baseball, and playing with my children.
+          my wife and two children. I enjoy programming, video games, board
+          games, poker, baseball, and playing with my children.
         </p>
         <p>
-          If you want to read thoughts I have about programming and the tech
-          industry, check out my{' '}
+          I also like solving interesting problems (both in tech and out of
+          tech). I have thoughts about many topics, which you can read on my{' '}
           <Link to="/blog" aria-label="Visit blog page">
             blog
-          </Link>
-          . If you are interested, you can see my{' '}
-          <Link to="/work-history" aria-label="Visit work history">
-            work history
-          </Link>
-          .
+          </Link>{' '}
+          or{' '}
+          <Link to={config.twitter} aria-label="Visit my twitter">
+            twitter
+          </Link>{' '}
+          if you are interested.
         </p>
+        <p>
+          If you what I have done or where I have been in my career, you might
+          want to check out these pages:
+        </p>
+        <ul>
+          <li>
+            <Link to="/work-history" aria-label="Visit work history">
+              Work history
+            </Link>
+          </li>
+          <li>
+            <Link to="/personal-projects" aria-label="Visit personal projects">
+              Personal projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="https://github.com/ShaunMcNamee"
+              aria-label="Visit my github"
+            >
+              GitHub
+            </Link>
+          </li>
+        </ul>
         <hr />
       </Container>
     </Layout>

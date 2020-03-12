@@ -55,6 +55,14 @@ export const Header = ({ dark = false }) => {
             >
               Resume
             </Link>
+            &nbsp; &nbsp;
+            <Link
+              to="/personal-projects"
+              aria-label="Visit personal projects"
+              activeStyle={{ color: colors.headerButtonActive }}
+            >
+              Projects
+            </Link>
           </div>
         </nav>
       </Container>
