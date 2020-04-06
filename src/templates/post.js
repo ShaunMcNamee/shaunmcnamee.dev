@@ -24,7 +24,7 @@ export default function Post({
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter} noSubscribeForm>
-      <SEO frontmatter={mdx.frontmatter} isBlogPost />
+      <SEO frontmatter={mdx.frontmatter} isBlogPost postImage={banner}/>
       <article
         css={css`
           width: 100%;

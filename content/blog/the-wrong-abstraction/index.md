@@ -2,6 +2,7 @@
 slug: the-wrong-abstraction
 date: 2020-01-31
 title: 'The Wrong Abstraction'
+description: 'Is the wrong abstraction better than none at all?'
 published: true
 banner: './banner.jpg'
 bannerCredit:
