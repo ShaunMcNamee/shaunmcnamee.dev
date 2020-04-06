@@ -24,7 +24,7 @@ export default function Post({
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter} noSubscribeForm>
-      <SEO frontmatter={mdx.frontmatter} isBlogPost postImage={banner}/>
+      <SEO frontmatter={mdx.frontmatter} isBlogPost />
       <article
         css={css`
           width: 100%;
@@ -114,6 +114,7 @@ export const pageQuery = graphql`
         bannerCredit
         slug
         keywords
+        description
       }
       body
     }

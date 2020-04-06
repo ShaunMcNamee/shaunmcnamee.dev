@@ -12,9 +12,9 @@ module.exports = {
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ['Video Blogger'],
+    keywords: ['Software Blogger'],
     canonicalUrl: config.siteUrl,
-    image: config.siteLogo,
+    image: config.siteUrl + pathPrefix + config.siteLogo,
     author: {
       name: config.author,
       minibio: ``,
