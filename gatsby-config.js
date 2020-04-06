@@ -14,7 +14,7 @@ module.exports = {
     description: config.siteDescription,
     keywords: ['Software Blogger'],
     canonicalUrl: config.siteUrl,
-    image: config.siteUrl + pathPrefix + config.siteLogo,
+    image: config.siteUrl + '/' + config.siteLogo,
     author: {
       name: config.author,
       minibio: ``,
