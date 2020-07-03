@@ -37,7 +37,7 @@ export const Header = ({ dark = false }) => {
             aria-label="go to homepage"
             activeStyle={{ color: colors.headerButtonActive }}
           >
-            Home
+            Promenade
           </Link>
           <div>
             <Link

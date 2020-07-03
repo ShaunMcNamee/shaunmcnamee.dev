@@ -11,6 +11,7 @@ import Share from '../components/Share'
 import config from '../../config/website'
 import { bpMaxSM } from '../lib/breakpoints'
 import Markdown from 'react-markdown'
+import { Stage } from '../components/Stage'
 
 export default function Post({
   data: { site, mdx },
@@ -40,6 +41,7 @@ export default function Post({
           >
             {title}
           </h1>
+          <Stage stageNumber={mdx.frontmatter.stageNumber} />
           <div
             css={css`
               display: flex;
@@ -56,9 +58,9 @@ export default function Post({
               }
             `}
           >
-            {author && <h3>{author}</h3>}
-            {author && <span>—</span>}
-            {date && <h3>{date}</h3>}
+            {/*{author && <h3>{author}</h3>}*/}
+            {/*{author && <span>—</span>}*/}
+            {/*{date && <h3>{date}</h3>}*/}
           </div>
           {banner && (
             <div
