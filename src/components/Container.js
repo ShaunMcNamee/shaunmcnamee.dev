@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 import { bpMaxSM } from 'lib/breakpoints'
 
 export const Container = ({
-  maxWidth = 600,
+  maxWidth = 800,
   noHorizontalPadding = false,
   noVerticalPadding = false,
   children,

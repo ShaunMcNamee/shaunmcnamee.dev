@@ -2,7 +2,6 @@ import React from 'react'
 import { css } from '@emotion/core'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import Link from './Link'
-import theme from '../../config/theme'
 
 const Project = ({ project }) => {
   return (

@@ -63,6 +63,14 @@ export const Header = ({ dark = false }) => {
             >
               Projects
             </Link>
+            &nbsp; &nbsp;
+            <Link
+              to="/about"
+              aria-label="About me"
+              activeStyle={{ color: colors.headerButtonActive }}
+            >
+              About
+            </Link>
           </div>
         </nav>
       </Container>
