@@ -189,15 +189,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
 
     createNodeField({
-      name: 'banner',
+      name: 'stageNumber',
       node,
-      value: node.frontmatter.banner,
-    })
-
-    createNodeField({
-      name: 'bannerCredit',
-      node,
-      value: node.frontmatter.bannerCredit,
+      value: node.frontmatter.stageNumber,
     })
 
     createNodeField({

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import { css } from '@emotion/core'
 import { Container } from 'components/Container'
 import SEO from '../components/SEO'
@@ -55,23 +54,6 @@ const Blog = ({
               flex-direction: column;
             `}
           >
-            {post.frontmatter.banner && (
-              <div
-                css={css`
-                  padding: 60px 60px 40px 60px;
-                  ${bpMaxSM} {
-                    padding: 20px;
-                  }
-                `}
-              >
-                <Link
-                  aria-label={`View ${post.frontmatter.title} article`}
-                  to={`/${post.fields.slug}`}
-                >
-                  <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
-                </Link>
-              </div>
-            )}
             <h2
               css={css`
                 margin-top: 30px;
@@ -156,13 +138,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
-            banner {
-              childImageSharp {
-                fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
             slug
             keywords
           }
