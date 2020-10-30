@@ -8,31 +8,39 @@ const Project = ({ project }) => {
     <div
       css={css`
         padding: 16px 0 0 0;
+        display: flex;
+        flex-direction: column;
       `}
     >
-      <div
-        css={css`
-          padding: 0 0 8px 0;
-        `}
-      >
-        <Link
-          to={project.link}
-          css={css`
-            font-size: 18px;
-            font-weight: bold;
-          `}
-        >
-          {project.name}
-        </Link>
-      </div>
-      <h6
+      <h2>{project.name}</h2>{' '}
+      <h5
         css={css`
           padding: 4px 0;
           margin-bottom: 12px;
         `}
       >
         {project.description}
-      </h6>
+      </h5>
+      <Link
+        to={project.link}
+        css={css`
+          font-size: 18px;
+          font-weight: bold;
+          padding-bottom: 8px;
+        `}
+      >
+        View project
+      </Link>
+      <Link
+        to={project.repo}
+        css={css`
+          font-size: 18px;
+          font-weight: bold;
+          padding-bottom: 8px;
+        `}
+      >
+        View code repository
+      </Link>
       <MDXRenderer>{project.body}</MDXRenderer>
     </div>
   )

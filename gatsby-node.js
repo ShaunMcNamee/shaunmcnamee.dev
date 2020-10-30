@@ -223,5 +223,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: node.frontmatter.link,
     })
+
+    createNodeField({
+      name: 'repo',
+      node,
+      value: node.frontmatter.repo,
+    })
   }
 }
