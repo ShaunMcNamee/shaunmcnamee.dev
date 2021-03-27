@@ -1,6 +1,6 @@
 ---
 startDate: 2019-03-11
-endDate: 2020-12-31
+endDate: 2021-06-30
 company: 'PricewaterhouseCoopers'
 title: 'Senior Full Stack Developer'
 ---
@@ -8,4 +8,4 @@ title: 'Senior Full Stack Developer'
 <p style="font-size: 16px"><span style="font-weight: 600">Team - </span>The team is entirely remote and made up of 13 developers from around the US. It skews towards more development experience, but we do have some early career devs doing great work.</p>
 <p style="font-size: 16px"><span style="font-weight: 600">Stack - </span>This application uses [popular JS server side library], [popular JS client side framework], and [combo graph / document database]. We are currently transitioning to [superset of JS] for both client and server. Our applications are in a monorepo and we use [popular source control site] and [popular CI/CD pipeline] for source control and CI/CD. The application is hosted on [popular platform for everything software related]. [* Note: Someone from PwC threat intelligence deemed this information too sensitive to be published publicly - so I have censored all the relevant technologies.]</p>
 <p style="font-size: 16px"><span style="font-weight: 600">My Role - </span>As I am one of the more senior developers on the team, my role is frequently help turn parts other developers create into a whole application. I spend significant time creating useful abstractions to make everyone else's development speedier. I helped create many of the components in our shared component library, and I also spend my time working through some of the harder issues in the application (especially the client-side).</p>
-<p style="font-size: 16px">This is a contract position that is currently running through December 2020.</p>
+<p style="font-size: 16px">This is a contract position that is currently running through June 2021.</p>
